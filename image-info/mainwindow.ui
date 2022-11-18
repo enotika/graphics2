@@ -71,8 +71,8 @@
      <rect>
       <x>90</x>
       <y>130</y>
-      <width>256</width>
-      <height>192</height>
+      <width>501</width>
+      <height>301</height>
      </rect>
     </property>
     <property name="editTriggers">
@@ -87,6 +87,37 @@
     <property name="sortingEnabled">
      <bool>true</bool>
     </property>
+    <property name="rowCount">
+     <number>0</number>
+    </property>
+    <property name="columnCount">
+     <number>5</number>
+    </property>
+    <column>
+     <property name="text">
+      <string>имя</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>размер</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>разрешение</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>глубина цвета</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>сжатие</string>
+     </property>
+    </column>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -95,7 +126,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>26</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>

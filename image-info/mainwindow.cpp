@@ -20,17 +20,21 @@ MainWindow::MainWindow(QWidget *parent)
     g -> addWidget(ui -> clearButton, 0, 3, 1, 1);
     g -> addWidget(ui -> dataHolder, 1, 0, 4, 4);
     ui -> dataHolder -> setColumnCount(5);
-    ui -> dataHolder -> setHorizontalHeaderLabels({"имя", "размер", "разрешение", "глубина цвета", "сжатие"});
-    ui -> dataHolder -> horizontalHeader() -> setSectionResizeMode(QHeaderView::Stretch);
     statusBar()->showMessage("Ничего не выбрано");
     setWindowTitle("Характеристики изображений");
-    dirFilter << "*.jpg" << "*.gif" << "*.tif" << "*.bmp" << "*.png" << "*.pcx";
     compression["bmp"] = "без сжатия";
     compression["gif"] = "LZW сжатие";
     compression["png"] = "Deflate сжатие";
     compression["jpg"] = "JPEG сжатие";
     compression["tiff"] = "ZIP/LZW/JPEG сжатие";
     compression["pcx"] = "RLE сжатие";
+
+    compression["BMP"] = "без сжатия";
+    compression["GIF"] = "LZW сжатие";
+    compression["PNG"] = "Deflate сжатие";
+    compression["JPG"] = "JPEG сжатие";
+    compression["TIFF"] = "ZIP/LZW/JPEG сжатие";
+    compression["PCX"] = "RLE сжатие";
     connect(ui -> dataHolder, SIGNAL(cellDoubleClicked(int,int)), this, SLOT(tableItemClicked(int,int)));
 }
 
